@@ -78,8 +78,8 @@ class App extends React.Component {
         <h2>Yummy Sausages to Try</h2>
           { this.state.sausages.map( sausage => { return (
           <div className="sausage-container">
-            <div class="row row-cols-2">
-              <div class="col mb-2">
+            <div className="row row-cols-2">
+              <div className="col mb-2">
               <div className="card sausage-card h-100">
               <div className="card-body" key={sausage._id}>
                 <h3>{sausage.name}</h3> <br />
