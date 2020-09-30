@@ -33,8 +33,8 @@ mongoose.connection.on('connected', () =>
 mongoose.connection.on('disconnected', () => console.log('mongo disconnected'))
 
 // CONTROLLERS
-// const sausageController = require('./controllers/sausageController.js')
-// app.use('/sausages', sausageController)
+const sausageController = require('./controllers/sausageController.js')
+app.use('/sausages', sausageController)
 
 // LISTENER
 app.listen(PORT, () => {
