@@ -1,6 +1,7 @@
 const express = require('express');
 const sausage = express.Router();
 const Sausage = require('../models/sausage.js')
+const sausageSeed = require('../models/sausageSeed.js')
 
 sausage.get('/', (req, res) => {
   Sausage.find({}, (err, foundSausages) => {
@@ -25,6 +26,12 @@ sausage.put('/:id', (req, res) => {
         res.json(foundSausages)
       })
     }
+  })
+})
+
+sausage.get('/seed', (req, res) => {
+  Sausage.insertMany(sausageSeed, (err, manySausages) => {
+    res.redirect('/')
   })
 })
 
