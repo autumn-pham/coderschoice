@@ -76,9 +76,9 @@ class App extends React.Component {
           <input type="submit" value="CREATE SAUSAGE" />
         </form>
         <h2>Yummy Sausages to Try</h2>
+        <div className="sausage-container">
+        <div className="row row-cols-2">
           { this.state.sausages.map( sausage => { return (
-          <div className="sausage-container">
-            <div className="row row-cols-2">
               <div className="col mb-2">
               <div className="card sausage-card h-100">
               <div className="card-body" key={sausage._id}>
@@ -134,9 +134,9 @@ class App extends React.Component {
               </div>
             </div>
         </div>
-        </div>
-        </div>
           ) } ) }
+          </div>
+          </div>
           </div>
     )
   }
