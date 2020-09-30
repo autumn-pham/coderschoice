@@ -95,6 +95,7 @@ class App extends React.Component {
                       type="text"
                       id="name"
                       onChange={this.handleChange}
+                      value={this.state.name}
                     />
                     <br />
                     <label htmlFor="image">Image</label>
@@ -103,6 +104,7 @@ class App extends React.Component {
                       type="text"
                       id="image"
                       onChange={this.handleChange}
+                      value={this.state.image}
                     />
                     <br />
                     <label htmlFor="country">Country</label>
@@ -111,6 +113,7 @@ class App extends React.Component {
                       type="text"
                       id="country"
                       onChange={this.handleChange}
+                      value={this.state.country}
                     />
                     <br />
                     <label htmlFor="description">Description</label>
@@ -119,6 +122,7 @@ class App extends React.Component {
                       type="text"
                       id="description"
                       onChange={this.handleChange}
+                      value={this.state.description}
                     />
                     <input type="submit" value="UPDATE" />
                   </form>
