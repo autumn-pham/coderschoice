@@ -1,6 +1,6 @@
 const express = require('express');
-const sausages = express.Router();
-// const Sausage = require('./models/sausage.js')
+const sausage = express.Router();
+const Sausage = require('../models/sausage.js')
 
 sausage.get('/', (req, res) => {
   Sausage.find({}, (err, foundSausages) => {
@@ -28,7 +28,7 @@ sausage.put('/:id', (req, res) => {
   })
 })
 
-animals.delete('/:id', (req, res) => {
+sausage.delete('/:id', (req, res) => {
   Sausage.findByIdAndRemove(req.params.id, (err, deleteSausage) => {
     Sausage.find({}, (err, foundSausages) => {
       res.json(foundSausages)
@@ -36,4 +36,4 @@ animals.delete('/:id', (req, res) => {
   })
 })
 
-module.exports = sausages
+module.exports = sausage
